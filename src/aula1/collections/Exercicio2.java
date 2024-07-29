@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-public class Exercicio1 {
+public class Exercicio2 {
+
 	public static void main(String[] args) {
 		ArrayList<Integer> lista = new ArrayList<>();
 		Random gerador = new Random();
@@ -15,11 +16,11 @@ public class Exercicio1 {
 			
 		}
 		Collections.sort(lista);
+		Collections.reverse(lista);
 		for(int i = 0; i < 50; i++) {
 			System.out.print(lista.get(i) + " ");
-		}	
+		}
 		
 	}
 
 }
-
