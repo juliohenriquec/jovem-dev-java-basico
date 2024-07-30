@@ -14,10 +14,10 @@ public class Exercicio4 {
 		Map<Character, Integer> contagemCaracteres = new HashMap<>();
 
 		for (char caractere : frase.toCharArray()) {
-			if (contagemCaracteres.containsKey(caractere)) {
-				contagemCaracteres.put(caractere, contagemCaracteres.get(caractere) + 1);
-			} else {
+			if (!contagemCaracteres.containsKey(caractere)) {
 				contagemCaracteres.put(caractere, 1);
+			} else {
+				contagemCaracteres.put(caractere, contagemCaracteres.get(caractere) + 1);
 			}
 		}
 		JOptionPane.showMessageDialog(null, "Quantidade de vezes que cada caractere aparece na frase: \n" + "Espaços "
