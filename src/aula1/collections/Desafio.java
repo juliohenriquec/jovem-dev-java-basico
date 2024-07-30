@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import javax.swing.JOptionPane;
 
-public class desafio {
+public class Desafio {
 	public static void main(String[] args) {
 		Map<Character, ArrayList<String>> vogais = new HashMap<>();
 		String palavra = "";
