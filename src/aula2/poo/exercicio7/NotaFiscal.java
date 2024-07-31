@@ -1,5 +1,12 @@
 package aula2.poo.exercicio7;
-//Não Comecei
-public class NotaFiscal {
 
+public class NotaFiscal {
+	String emitente;
+	private static double valor;
+
+	public static double calculaValor(double valorBruto, double valorDesconto) {
+		valor = valorBruto - valorDesconto;
+		return valor;
+
+	}
 }
