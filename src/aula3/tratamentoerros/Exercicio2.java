@@ -10,7 +10,7 @@ public class Exercicio2 {
 	public static void divisao(int num1, int num2) {
 		try {
 			if (num2 == 0) {
-				throw new ZeroException();
+				throw new ZeroException("O segundo número não pode ser zero");
 			}
 			int divisao;
 			System.out.println(divisao = num1 / num2);
