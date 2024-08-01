@@ -33,7 +33,7 @@ public class Exercicio3 {
 			iterator.remove();
 
 		} catch (IllegalStateException e) {
-			e.printStackTrace();a
+			e.printStackTrace();
 		}
 	}
 }
