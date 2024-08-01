@@ -27,10 +27,11 @@ public class Exercicio3 {
 
 		try {
 			ArrayList<String> list = new ArrayList<>();
-			list.add("Item 1");
-
-			Iterator<String> iterator = list.iterator();
-			iterator.remove();
+			list.remove(0);
+//			list.add("Item 1");
+//
+//			Iterator<String> iterator = list.iterator();
+//			iterator.remove();
 
 		} catch (IllegalStateException e) {
 			e.printStackTrace();
