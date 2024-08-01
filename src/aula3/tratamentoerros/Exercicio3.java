@@ -1,6 +1,7 @@
 package aula3.tratamentoerros;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Exercicio3 {
 	public static void main(String[] args) {
@@ -24,15 +25,15 @@ public class Exercicio3 {
 			e.printStackTrace();
 		}
 
-		ArrayList<Integer> lista = new ArrayList<>();
-
-		for (int i = 0; i < 10; i++) {
-			lista.add(i);
-		}
-
 		try {
+			ArrayList<String> list = new ArrayList<>();
+			list.add("Item 1");
+
+			Iterator<String> iterator = list.iterator();
+			iterator.remove();
+
 		} catch (IllegalStateException e) {
-			e.printStackTrace();
+			e.printStackTrace();a
 		}
 	}
 }
