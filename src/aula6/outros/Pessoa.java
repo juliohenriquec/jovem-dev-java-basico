@@ -1,4 +1,4 @@
-package aula5.stream;
+package aula6.outros;
 
 import java.time.LocalDate;
 
@@ -23,8 +23,6 @@ class Pessoa {
 
     @Override
     public String toString() {
-        return "nome= " + nome +
-                ", dataDeNascimento= " + dataDeNascimento +
-                ", telefone= " + telefone;
+        return String.format(" nome= %s %n dataDeNascimento= %s %n telefone=  %s", nome,dataDeNascimento, telefone);
     }
 }

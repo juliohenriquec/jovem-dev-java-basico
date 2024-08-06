@@ -18,15 +18,15 @@ public class Exercicio5 {
 		nomes.add("Carlos");
 		nomes.add("Alberto");
 		nomes.add("Flavio");
-		
+
 		try {
-			Optional<String> berto = Optional.ofNullable(nomes.stream().filter(n -> n.endsWith("berto")).findFirst().orElseThrow(() -> new ZeroBertoException("Nenhum nome termina com 'berto'.")));;
+			Optional<String> berto = Optional.ofNullable(nomes.stream().filter(n -> n.endsWith("berto")).findFirst()
+					.orElseThrow(() -> new ZeroBertoException("Nenhum nome termina com 'berto'.")));
 			System.out.println(berto);
-		}catch(ZeroBertoException e) {
-            System.out.println(e.getMessage());
-        }
-		
+		} catch (ZeroBertoException e) {
+			System.out.println(e.getMessage());
+		}
+
 	}
-	
-	
+
 }
