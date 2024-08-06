@@ -2,35 +2,31 @@ package aula5.stream;
 
 import java.time.LocalDate;
 
-public class Pessoa {
+class Pessoa {
+    private String nome;
+    private LocalDate dataDeNascimento;
+    private String telefone;
 
-	static String nome;
-	static LocalDate nascimento;
-	static String telefone;
-	
-	public Pessoa(String nome,LocalDate nascimento,String telefone ) {
-		this.nome = nome;
-		this.nascimento = nascimento;
-		this.telefone = telefone;
-	}
-	
-	public static String getNome() {
-		return nome;
+    public Pessoa(String nome, LocalDate dataDeNascimento, String telefone) {
+        this.nome = nome;
+        this.dataDeNascimento = dataDeNascimento;
+        this.telefone = telefone;
+    }
 
-	}
-	
-	public LocalDate getNascimento() {
-		return nascimento;
+    public String getNome() {
+        return nome;
+    }
 
-	}
-	
-	public static String gettelefone() {
-		return telefone;
+    public LocalDate getDataDeNascimento() {
+        return dataDeNascimento;
+    }
 
-	}
-	public String toString() {
-		return nome;
-		
-	}
-	
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", dataDeNascimento=" + dataDeNascimento +
+                ", telefone='" + telefone + '\'' +
+                '}';
+    }
 }

@@ -3,6 +3,8 @@ package aula5.stream;
 import java.util.ArrayList;
 import java.util.Optional;
 
+import aula5.stream.execeptions.ZeroBertoException;
+
 public class Exercicio5 {
 	public static void main(String[] args) {
 		ArrayList<String> nomes = new ArrayList<String>();
@@ -16,9 +18,14 @@ public class Exercicio5 {
 		nomes.add("Carlos");
 		nomes.add("Alberto");
 		nomes.add("Flavin do Pneu");
-
-		Optional<String> berto = nomes.stream().filter(n -> n.endsWith("berto")).findFirst();
-		System.out.println(berto);
+		
+		try {
+			Optional<String> berto = Optional.ofNullable(nomes.stream().filter(n -> n.endsWith("berto")).findFirst().orElseThrow(() -> new ZeroBertoException("Nenhum nome termina com 'berto'.")));;
+			System.out.println(berto);
+		}catch(ZeroBertoException e) {
+            System.out.println(e.getMessage());
+        }
+		
 	}
 	
 	
