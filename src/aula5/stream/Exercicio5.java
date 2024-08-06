@@ -17,7 +17,7 @@ public class Exercicio5 {
 		nomes.add("João");
 		nomes.add("Carlos");
 		nomes.add("Alberto");
-		nomes.add("Flavin do Pneu");
+		nomes.add("Flavio");
 		
 		try {
 			Optional<String> berto = Optional.ofNullable(nomes.stream().filter(n -> n.endsWith("berto")).findFirst().orElseThrow(() -> new ZeroBertoException("Nenhum nome termina com 'berto'.")));;
