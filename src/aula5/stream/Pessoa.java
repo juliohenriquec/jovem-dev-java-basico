@@ -2,7 +2,7 @@ package aula5.stream;
 
 import java.time.LocalDate;
 
-class Pessoa {
+public class Pessoa {
     private String nome;
     private LocalDate dataDeNascimento;
     private String telefone;

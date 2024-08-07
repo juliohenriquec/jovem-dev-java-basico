@@ -21,21 +21,23 @@ public class Desafio {
 		pessoas.add(new Pessoa("Julia", LocalDate.of(1995, 8, 20), "9999999999"));
 		pessoas.add(new Pessoa("Juliano", LocalDate.of(1994, 10, 13), "9999999999"));
 
-		
-		  List<String> nomesFiltrados = pessoas.stream()
-	                .filter(p -> {
-	                    char primeiroCaractere = p.getNome().toLowerCase().charAt(0);
-	                    boolean comecaComVogal = "aeiou".indexOf(primeiroCaractere) != -1;
-	                    boolean anoBissexto = p.getDataDeNascimento().isLeapYear();
-	                    return comecaComVogal || anoBissexto;
-	                })
-	                .map(Pessoa::getNome)
-	                .sorted((n1, n2) -> n2.compareTo(n1)) 
-	                .collect(Collectors.toList());
-
-	     
-	        String resultado = String.join("; ", nomesFiltrados);
+	        String resultado = String.join("; ", nomesFiltrados(pessoas));
 	        System.out.println(resultado);
+	}
+	
+	public static List<String> nomesFiltrados(List<Pessoa> pessoas){
+		List<String> nomesFiltrados = pessoas.stream()
+                .filter(p -> {
+                    char primeiroCaractere = p.getNome().toLowerCase().charAt(0);
+                    boolean comecaComVogal = "aeiou".indexOf(primeiroCaractere) != -1;
+                    boolean anoBissexto = p.getDataDeNascimento().isLeapYear();
+                    return comecaComVogal || anoBissexto;
+                })
+                .map(Pessoa::getNome)
+                .sorted((n1, n2) -> n2.compareTo(n1)) 
+                .collect(Collectors.toList());
+		return nomesFiltrados;
+		
 	}
 
 }
