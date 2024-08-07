@@ -23,6 +23,6 @@ class Pessoa {
 
     @Override
     public String toString() {
-        return String.format(" nome= %s %n dataDeNascimento= %s %n telefone=  %s", nome,dataDeNascimento, telefone);
+        return String.format(" nome = %s %n Data de Nasciment o= %s %n telefone =  %s", nome,dataDeNascimento, telefone);
     }
 }
